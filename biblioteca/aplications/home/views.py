@@ -8,6 +8,9 @@ from aplications.prestamos.models import prestamo
 
 from django.views.generic import CreateView, ListView, UpdateView, TemplateView, DeleteView
 
+class HomeView(TemplateView):
+    template_name = "home/home.html"
+
 #---------------------------- CREATE VIEW-----------------------#
 class UsuarioCreateView(CreateView):
     template_name = "home/usuario.html"

@@ -7,6 +7,7 @@ app_name = "home_app"
 
 urlpatterns = [
     path('success/', views.successView.as_view(), name = 'elim'),
+    path('home/', views.HomeView.as_view(), name = 'elim'),
 
     path('usuario/', views.UsuarioCreateView.as_view()),
     path('libro/', views.LibroCreateView.as_view()),

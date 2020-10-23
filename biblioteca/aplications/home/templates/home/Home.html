@@ -13,46 +13,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <h1 class="text-center">Prestamos</h1>
+    <h1 class="text-center">Bliblioteca</h1>
     <div style="text-align:center;">
-        <button type="button" class="btn btn-primary" onclick="location.href='http://127.0.0.1:8000/home'">Volver al home</button>
         <table style="margin: 0 auto;" class="table table-striped">
             <thead class="table table-dark">
-                <th>Libro</th>
+                <th>Prestamo</th>
                 <th>Usuario</th>
-                <th>Fecha prestamo</th>
-                <th>Fecha devolucion</th>
-                <th>Opciones</th>
+                <th>Libros</th>
             </thead>
-
-            {% for c in prestamo %}
             <tr>
                 <td>
-                    <p>
-                        {{c.codigo_libro.Titulo}}
-                    </p>
+                    <button type="button" class="btn btn-primary" onclick="location.href='http://127.0.0.1:8000/prestamo'">Crear Prestamo</button>
                 </td>
                 <td>
-                    <p>
-                        {{c.codigo_usuario.Nombre}}
-                    </p>
+                    <button type="button" class="btn btn-primary" onclick="location.href='http://127.0.0.1:8000/usuario'">Crear Usuario</button>
                 </td>
                 <td>
-                    <p>
-                        {{c.Fec_prestamo}}
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{c.Fec_devolucion}}
-                    </p>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-primary" onclick="location.href='http://127.0.0.1:8000/actualizar_prestamo/{{c.id}}'">actualizar</button>
-                    <button type="button" class="btn btn-secondary" onclick="location.href='http://127.0.0.1:8000/eliminar_prestamo/{{c.id}}'">Eliminar</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='http://127.0.0.1:8000/libro'">Crear libro</button>
                 </td>
             </tr>
-            {% endfor %}
+            <tr>
+                <td>
+
+                    <button type="button" class="btn btn-primary" onclick="location.href='http://127.0.0.1:8000/listar_prestamo'">Observar Prestamos</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary" onclick="location.href='http://127.0.0.1:8000/listar_usuario'">Observar Usuarios</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary" onclick="location.href='http://127.0.0.1:8000/listar_libro'">Observar libros</button>
+                </td>
+            </tr>
         </table>
     </div>
 </body>

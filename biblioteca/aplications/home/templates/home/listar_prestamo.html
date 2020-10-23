@@ -21,6 +21,7 @@
                 <th>Usuario</th>
                 <th>Fecha prestamo</th>
                 <th>Fecha devolucion</th>
+                <th>Opciones</th>
             </thead>
 
             {% for c in prestamo %}
@@ -44,6 +45,10 @@
                     <p>
                         {{c.Fec_devolucion}}
                     </p>
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-primary" onclick="location.href='http://127.0.0.1:8000/actualizar_prestamo/{{c.id}}'">actualizar</button>
+                    <button type="submit" class="btn btn-secondary" onclick="location.href='http://127.0.0.1:8000/eliminar_prestamo/{{c.id}}'">Eliminar</button>
                 </td>
             </tr>
             {% endfor %}

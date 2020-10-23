@@ -24,6 +24,7 @@
                 <th>Editorial</th>
                 <th>NumPage</th>
                 <th>Autor</th>
+                <th>Opciones</th>
             </thead>
 
             {% for c in libro %}
@@ -57,6 +58,10 @@
                     <p>
                         {{c.codigo_autor.Nombre}}
                     </p>
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-primary" onclick="location.href='http://127.0.0.1:8000/actualizar_libro/{{c.id}}'">actualizar</button>
+                    <button type="submit" class="btn btn-secondary" onclick="location.href='http://127.0.0.1:8000/eliminar_libro/{{c.id}}'">Eliminar</button>
                 </td>
             </tr>
             {% endfor %}

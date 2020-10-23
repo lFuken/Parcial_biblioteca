@@ -19,6 +19,7 @@
             <thead class="table table-dark">
                 <th>Nombre</th>
                 <th>Nacionalidad</th>
+                <th>Opciones</th>
             </thead>
 
             {% for c in autor %}
@@ -32,6 +33,10 @@
                     <p>
                         {{c.Nacionalidad}}
                     </p>
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-primary" onclick="location.href='http://127.0.0.1:8000/actualizar_autor/{{c.id}}'">actualizar</button>
+                    <button type="submit" class="btn btn-secondary" onclick="location.href='http://127.0.0.1:8000/eliminar_autor/{{c.id}}'">Eliminar</button>
                 </td>
             </tr>
             {% endfor %}
